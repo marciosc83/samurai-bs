@@ -29,5 +29,6 @@ module.exports = defineConfig({
     "chromeWebSecurity": false,
     "viewportWidth":1440,
     "viewportHeight":900
+    //TO DO - adicionar aqui as configurações de banco de dados como objeto json
   },
 });
