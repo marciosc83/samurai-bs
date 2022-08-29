@@ -17,10 +17,7 @@ describe('login', function () {
         })
 
         it('Deve logar com sucesso', function () {
-            loginPage.go()
-            loginPage.form(user)
-            loginPage.submit()
-            dashPage.header.userLoggedIn(user.name)
+            cy.uiLogin(user)
         })
     })
 
