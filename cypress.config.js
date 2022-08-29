@@ -42,11 +42,12 @@ module.exports = defineConfig({
         }
       })
     },
-      "baseUrl": "http://localhost:3000",
-      "apiServer": "http://localhost:3333",
+      "baseUrl": "https://samuraibs-web-marciosc.herokuapp.com",
+      "apiServer": "https://samuraibs-api-marciosc.herokuapp.com",
       "chromeWebSecurity": false,
       "viewportWidth": 1440,
       "viewportHeight": 900,
+      "defaultCommandTimeout": 30000,
       //TO DO - adicionar as configurações de banco de dados como objeto json
   },
 });

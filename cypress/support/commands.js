@@ -48,7 +48,7 @@ Cypress.Commands.add('postUser', function (user) {
 
     cy.request({
         method: 'POST',
-        url: 'http://localhost:3333/users',
+        url: 'https://samuraibs-api-marciosc.herokuapp.com/users',
         body: user
     }).then(function (response) {
         expect(response.status).to.eq(200)
@@ -58,7 +58,7 @@ Cypress.Commands.add('postUser', function (user) {
 Cypress.Commands.add('recoveryPass', function (email) {
     cy.request({
         method: 'POST',
-        url: 'http://localhost:3333/password/forgot',
+        url: 'https://samuraibs-api-marciosc.herokuapp.com/forgot',
         body: { email: email }
     }).then(function (response) {
         expect(response.status).to.eq(204)
@@ -87,7 +87,7 @@ Cypress.Commands.add('createAppointment', function (hour) {
 
     cy.request({
         method: 'POST',
-        url: 'http://localhost:3333/appointments',
+        url: 'https://samuraibs-api-marciosc.herokuapp.com/appointments',
         body: payload,
         headers: {
             authorization: 'Bearer ' + Cypress.env('apiToken')
@@ -103,7 +103,7 @@ Cypress.Commands.add('createAppointment', function (hour) {
 Cypress.Commands.add('setProviderId', function (providerEmail) {
     cy.request({
         method: 'GET',
-        url: 'http://localhost:3333/providers',
+        url: 'https://samuraibs-api-marciosc.herokuapp.com/providers',
         headers: {
             authorization: 'Bearer ' + Cypress.env('apiToken')
         }
@@ -130,7 +130,7 @@ Cypress.Commands.add('apiLogin', function (user, setLocalStorage = false) {
 
     cy.request({
         method: 'POST',
-        url: 'http://localhost:3333/sessions',
+        url: 'https://samuraibs-api-marciosc.herokuapp.com/sessions',
         body: payload
     }).then(function (response) {
         expect(response.status).to.eql(200)
