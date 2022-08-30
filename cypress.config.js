@@ -50,4 +50,5 @@ module.exports = defineConfig({
       "defaultCommandTimeout": 30000,
       //TO DO - adicionar as configurações de banco de dados como objeto json
   },
+  projectId: "oc8gsf"
 });
