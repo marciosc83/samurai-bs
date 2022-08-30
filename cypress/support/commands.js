@@ -58,7 +58,7 @@ Cypress.Commands.add('postUser', function (user) {
 Cypress.Commands.add('recoveryPass', function (email) {
     cy.request({
         method: 'POST',
-        url: 'https://samuraibs-api-marciosc.herokuapp.com/forgot',
+        url: 'https://samuraibs-api-marciosc.herokuapp.com/password/forgot',
         body: { email: email }
     }).then(function (response) {
         expect(response.status).to.eq(204)
